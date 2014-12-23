@@ -1,250 +1,116 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="utf-8" />
-    <title>Fundación Mama Sena</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fundación Mamá Sena</title>
+    <meta name="description" content="Fundación Mamá Sena">
+    <meta name="keywords" content="Fundación Mamá Sena Fantino Santo Domingo">
+    <meta name="author" content="mailto:willyovalle16+fms@gmail.com">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles/f3b12f69.main.css">
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome CSS -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Universal Mega menu -->
+    <link href="assets/css/mgmenu.min.css" rel="stylesheet">
+    <!-- Magnific Popup -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <!-- Owl carousel -->
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+
+    <!-- CSS for this page -->
+
+    <!-- Base style -->
+    <link href="assets/css/styles/style.css" rel="stylesheet">
+    <!-- Skin CSS -->
+    <link href="assets/css/styles/skin-lblue.css" rel="stylesheet" id="color_theme">
+
+    <!-- Custom CSS. Type your CSS code in custom.css file -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="#">
 </head>
-<body>
 
-<div class="container">
+<body ng-app="fmsApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-<div class="page-header text-center">
-    <!-- Grettings -->
-    <h1><span id="time"></span> <br>
-<img src="https://dl.dropboxusercontent.com/u/15293709/fundacion_mama_sena.png" class="img-circle img-fundacion"><br>
-<small>¡Bienvenid@s a la página web de la Fundación Mamá Sena!</small></h1>
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
 
-</div>
+    <!-- Add your site or application content here -->
 
-<!-- Coming Soon - START -->
+    <div ui-view=""></div>
 
-<style>
-.bgcontainer {
-    /*background: url('content/images/Santo_Domingo.jpg') no-repeat center center fixed;*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-bottom:100px;
-}
 
-.img-fundacion{
-    width:auto%;
-    height: 300px;
-}
-</style>
 
-<div class="bgcontainer" style="margin-top: 10px;">
-    <div class="col-md-12 text-center">
-        <h3>Este sitio web está actualmente en construcción, estará en vivo en:</h3>
-        <br />
-    </div>
-    <div class="col-md-2 hidden-xs"></div>
-    <div class="col-md-2 col-sm-6 col-xs-9 text-center">
-        <div id="progress_days" style="background-color: transparent;" class="prg"></div>
-    </div>
-    <div class="col-md-2 col-sm-6 col-xs-9 text-center">
-        <div id="progress_hours" style="background-color: transparent;" class="prg"></div>
-    </div>
-    <div class="col-md-2 col-sm-6 col-xs-9 text-center">
-        <div id="progress_mins" style="background-color: transparent;" class="prg"></div>
-    </div>
-    <div class="col-md-2 col-sm-6 col-xs-9 text-center">
-        <div id="progress_secs" style="background-color: transparent;" class="prg"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12 text-center text-center v-center">
-  
-        </div>
-    </div>
-    <br />
-    <br />
-    <div class="text-center">
-        <h1>¡Síguenos!</h1>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 text-center v-center" style="font-size: 39pt;">
-            <a href="http://instagram.com/fundacionmamasena"><span class="avatar"><i class="fa fa-instagram"></i></span></a>
-            <a href="https://www.facebook.com/fundacionmamasena"><span class="avatar"><i class="fa fa-facebook"></i></span></a>
-            <a href="https://github.com/fundacionmamasena/fundacionmamasena.github.io/"><span class="avatar"><i class="fa fa-github"></i></span></a>
 
-        </div>       
-    </div>
-</div>
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <!-- Scroll to top -->
+    <span class="totop"><a href="#"><i class="fa fa-angle-up bg-color"></i></a></span>
 
-<!-- you need to include the shieldui css and js assets in order for the charts to work -->
-<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css" />
-<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
-<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-<script type="text/javascript">
-    jQuery(function ($) {
-        //First, initialize greetings.
-        var tm = new Date($.now()).getHours();
-        if(tm > 6 && tm <= 12) $("#time").html('¡Buenos días!');
-        if(tm > 12 && tm <= 18) $("#time").html('¡Buenas tardes!');
-        if((tm > 18 && tm <= 24) || (tm >= 0 && tm < 6)) $("#time").html('¡Buenas noches!');
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
 
-        // the date of the release - for example the below will set the release date to 
-        // 1st of March (month is 0-based), 2100 at noon 12:00 o'clock
-        // var release_date = new Date(2100, 2, 1, 12, 0, 0);
-        // format is: new Date(year, month [, day, hour, minute, second, millisecond]);
-        // (note that the month is 0-based).
 
-        // for showcase purpose, we set the release date to be 10 days from the current time
-        var release_date = new Date(2014,10,11);
-        var release_unixtime_ms = release_date.getTime(),
-            total_days = Math.floor((release_unixtime_ms - (new Date()).getTime()) / (24 * 60 * 60 * 1000)),
-            update_timer = null,
-            progress_days,
-            progress_hours,
-            progress_mins,
-            progress_secs;
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
-        // define a function to initialize the progressbars
-        function init_progressbars() {
-            // set the width and height of each progressbar to the width of their container
-            $(".prg").each(function () {
-                $(this)
-                    .width($(this).parent().width())
-                    .height($(this).parent().width());
-            });
+    <script src="scripts/2e599bfc.modules.js"></script>
 
-            // initialize the progressbar widgets
-            progress_days = $("#progress_days").shieldProgressBar({
-                min: 0,
-                max: total_days,
-                value: total_days,
-                layout: "circular",
-                layoutOptions: {
-                    circular: {
-                        borderColor: "white",
-                        width: 30,
-                        borderWidth: 3,
-                        color: "#1E98E4",
-                        backgroundColor: "white"
-                    }
-                },
-                text: {
-                    enabled: true,
-                    template: '<span style="font-size:27px;color:black;">{0:n0} días</span> '
-                },
-                reversed: true
-            }).swidget();
+    <script src="scripts/611fd49e.scripts.js"></script>
 
-            progress_hours = $("#progress_hours").shieldProgressBar({
-                min: 0,
-                max: 24,
-                value: 24,
-                layout: "circular",
-                layoutOptions: {
-                    circular: {
-                        borderColor: "white",
-                        width: 23,
-                        borderWidth: 3,
-                        color: "#1E98E4",
-                        backgroundColor: "white"
-                    }
-                },
-                text: {
-                    enabled: true,
-                    template: '<span style="font-size:27px;color:black;">{0:n0} horas</span> '
-                },
-                reversed: true
-            }).swidget();
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!-- Placeholders JS -->
+    <script src="assets/js/placeholders.js"></script>
+    <!-- Universal mega menu menu -->
+    <script src="assets/js/mgmenu.min.js"></script>
+    <script src="assets/js/mgmenu_plugins.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Owl carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Respond JS for IE8 -->
+    <script src="assets/js/respond.min.js"></script>
+    <!-- HTML5 Support for IE -->
+    <script src="assets/js/html5shiv.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
 
-            progress_mins = $("#progress_mins").shieldProgressBar({
-                min: 0,
-                max: 60,
-                value: 60,
-                layout: "circular",
-                layoutOptions: {
-                    circular: {
-                        borderColor: "white",
-                        width: 15,
-                        borderWidth: 3,
-                        color: "#1E98E4",
-                        backgroundColor: "white"
-                    }
-                },
-                text: {
-                    enabled: true,
-                    template: '<span style="font-size:27px;color:black;">{0:n0} minutos</span> '
-                },
-                reversed: true
-            }).swidget();
-
-            progress_secs = $("#progress_secs").shieldProgressBar({
-                min: 0,
-                max: 60,
-                value: 60,
-                layout: "circular",
-                layoutOptions: {
-                    circular: {
-                        borderColor: "white",
-                        width: 10,
-                        borderWidth: 3,
-                        color: "#1E98E4",
-                        backgroundColor: "white"
-                    }
-                },
-                text: {
-                    enabled: true,
-                    template: '<span style="font-size:27px;color:black;">{0:n0} segundos</span> '
-                },
-                reversed: true
-            }).swidget();
-
-            // restart the update timer
-            clearInterval(update_timer);
-            update_timer = setInterval(update_progressbars, 300);
-        }
-
-        function update_progressbars() {
-            var total_remaining_seconds = Math.floor((release_unixtime_ms - (new Date()).getTime()) / 1000),
-                remaining_days = Math.floor(total_remaining_seconds / (24 * 60 * 60));
-
-            total_remaining_seconds = total_remaining_seconds % (24 * 60 * 60);
-            var remaining_hours = Math.floor(total_remaining_seconds / (60 * 60));
-
-            total_remaining_seconds = total_remaining_seconds % (60 * 60);
-            var remaining_mins = Math.floor(total_remaining_seconds / 60);
-            var remaining_secs = total_remaining_seconds % 60;
-
-            // update the progressbars if new values are different
-            if (remaining_days != progress_days.value()) {
-                progress_days.value(remaining_days);
-            }
-            if (remaining_hours != progress_hours.value()) {
-                progress_hours.value(remaining_hours);
-            }
-            if (remaining_mins != progress_mins.value()) {
-                progress_mins.value(remaining_mins);
-            }
-            if (remaining_secs != progress_secs.value()) {
-                progress_secs.value(remaining_secs);
-            }
-        }
-
-        // call this function whenever the window size changes
-        $(window).on("resize", init_progressbars);
-
-        // init the progressbars now
-        init_progressbars();
-    });
-</script>
-<!-- Coming Soon - END -->
-
-</div>
-
+    <!-- Javascript for this page -->
 </body>
+
 </html>
