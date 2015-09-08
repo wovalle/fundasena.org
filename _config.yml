@@ -1,0 +1,13 @@
+# Site settings
+title: Fundación Mamá Sena
+acronym: FMS
+email: fundacionmamasena@gmail.com
+description: Fundación Mamá Sena es una institución sin fines de lucro que se propone la recomposición de la sociedad a través de procesos de reflexión, capacitación y acción comunitaria para el crecimiento en valores humanos.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://fundacionmamasena.org" # the base hostname & protocol for your site
+
+# Build settings
+markdown: rdiscount
+rdiscount:
+    extensions: [smart]
+permalink: /noticias/:title
