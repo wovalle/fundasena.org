@@ -7,7 +7,5 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://fundacionmamasena.org" # the base hostname & protocol for your site
 
 # Build settings
-markdown: rdiscount
-rdiscount:
-    extensions: [smart]
+markdown: kramdown
 permalink: /noticias/:title
