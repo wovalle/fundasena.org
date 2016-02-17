@@ -15,3 +15,10 @@
   	margin-left: auto;
   	margin-right: auto;
 }
+
+.programs-paragraphs{
+	background-color:white;
+	color:black;
+	margin:20px;
+	padding:10px
+}
