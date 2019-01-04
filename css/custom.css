@@ -4,15 +4,14 @@
 }
 
 .image-gallery a {
-  max-width: 180px;
-  max-height: 180px;
   cursor: pointer;
 }
 
 .image-gallery img {
-  width: 100%;
-  height: 100%;
+  height: 180px;
   padding: 15px 0;
+  width: 100%;
+  object-fit: contain;
 }
 
 .foot .brand-bg {
