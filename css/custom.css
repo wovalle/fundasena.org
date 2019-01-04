@@ -1,25 +1,30 @@
-#iframe-brochure{
-	width: 100%;
-	height: 800px;
+#iframe-brochure {
+  width: 100%;
+  height: 800px;
 }
 
-.image-gallery img{
-	width: 180px;
-	height: 180px;
-  	margin: 30px 0 0 0;
-  	cursor: pointer;
+.image-gallery a {
+  max-width: 180px;
+  max-height: 180px;
+  cursor: pointer;
 }
 
-.foot .brand-bg{
-	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
 }
 
-.programs-paragraphs{
-	background-color:white;
-	color:black;
-	margin:20px;
-	padding:10px;
-	font-size: 14px;
+.foot .brand-bg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.programs-paragraphs {
+  background-color: white;
+  color: black;
+  margin: 20px;
+  padding: 10px;
+  font-size: 14px;
 }

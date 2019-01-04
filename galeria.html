@@ -3,24 +3,28 @@ layout: default
 ---
 
 <div class="block-heading-two">
-	<h3><span>Galería</span></h3>
+  <h3><span>Galería</span></h3>
 </div>
 
-<div id='gallery'></div>
+<div id="gallery"></div>
 
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript" src="{{site.baseurl}}/js/spectragram.min.js"></script>
+<script
+  type="text/javascript"
+  src="{{ site.baseurl }}/js/spectragram.min.js"
+></script>
 <script type="text/javascript">
-	jQuery.fn.spectragram.accessData = {
-		clientID: '9bdb3fe010764295bef1a26b93de6648',
-		accessToken: '1531897564.9bdb3fe.b793fbab1dd547e6bcca91fa01c6ea80'
-	};
+  jQuery.fn.spectragram.accessData = {
+    clientID: "9bdb3fe010764295bef1a26b93de6648",
+    accessToken: "1531897564.9bdb3fe.955bc40a8e3a45fe9c7bae29afeaa8a9"
+  };
 
-	$('#gallery').spectragram('getUserFeed',{
-		query: 'fundasenard',
-		max: 16,
-		size: 'medium',
-		wrapEachWith: '<div class="col-md-3 col-sm-4 col-xs-6 image-gallery"></div>',
-		complete : null     
-	});
+  $("#gallery").spectragram("getUserFeed", {
+    query: "fundasenard",
+    max: 16,
+    size: "medium",
+    wrapEachWith:
+      '<div class="col-md-3 col-sm-4 col-xs-6 image-gallery"></div>',
+    complete: null
+  });
 </script>
