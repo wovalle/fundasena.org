@@ -2,19 +2,19 @@
 title: Fundación Mamá Sena
 timezone: UTC
 collections:
-  noticias:
-    title: Posts
+  posts:
+    title: Noticias
     output: true
   uploads:
     title: Uploads
     output: true
 defaults:
-  scope:
-    path: ""
-    type: "noticias"
-  values:
-    layout: "default"
-    author: "Admin"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "Admin"
 acronym: FUNDASENA
 email: fundacionmamasena@gmail.com
 description:
