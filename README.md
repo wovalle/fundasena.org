@@ -14,6 +14,6 @@ Assuming that you have [a full ruby environment](https://jekyllrb.com/docs/insta
 
 ##### Build the site and make it available on a local server
 
-`jekyll serve`
+`jekyll serve -l`
 
 Now browse to http://localhost:4000

@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="blog-masonry">
+    <!-- Grid Item - Image, Heading and Para -->
+    {% for post in site.posts %}
+
+    <div class="item col-md-4 col-sm-12 col-xs-12">
+      <!-- Entry for each grid -->
+      <div class="grid-entry">
+        <!-- Grid Image Container -->
+        <div class="grid-img">
+          <!-- Image -->
+          <img src="{{ post.image | default: '/uploads/logos/logo.jpg' }}" class="img-responsive" alt="" />
+          <!-- Grid Image Hover Effect -->
+          <span class="grid-img-hover"></span>
+          <a href="{{ post.url }}" class="lightbox">
+            <i class="fa fa-search hover-icon"></i>
+          </a>
+        </div>
+        <!-- Grid entry information -->
+        <div class="entry-info">
+          <!-- Heading -->
+          <h4>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h4>
+          <div class="bor"></div>
+          <!-- Paragraph -->
+          {% assign short_desc = post.short_description | strip_newlines %}
+          {% if short_desc != "" %}
+          <p>{{ short_desc }}</p>
+          {% else %}
+          <p>{{ post.content | truncate: 100 }}</p>
+          {% endif %}
+
+          <a href="{{ post.url }}" class="read-more">Leer mas <i class="fa fa-angle-double-right"></i></a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="clearfix"></div>
+  </div>
+
+  <hr />
+  <!--
+  Pagination
+  <ul class="pagination">
+    <li><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+  -->
+</div>

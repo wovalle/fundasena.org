@@ -27,3 +27,7 @@
   padding: 10px;
   font-size: 14px;
 }
+
+.blog-masonry .item .grid-entry .bor {
+  background: #32c8de;
+}
