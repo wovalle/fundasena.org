@@ -13,10 +13,11 @@ defaults:
     path: ''
     type: posts
   values:
-    image: 
+    image:
     layout: post
     author: Admin
     has_comments: true
+    short_description:
 acronym: FUNDASENA
 email: fundacionmamasena@gmail.com
 description: Fundación Mamá Sena es una institución sin fines de lucro que se propone
