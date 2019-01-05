@@ -64,10 +64,9 @@ layout: default
 
       {% include share-buttons.html %}
 
-      <!-- Comments section -->
-      <div class="blog-comments">
-
-      </div>
+      {% if page.has_comments %}
+      {% include disqus.html %}
+      {% endif %}
 
       <!-- Pager -->
       <!-- <ul class="pager">

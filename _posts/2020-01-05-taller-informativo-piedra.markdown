@@ -3,6 +3,7 @@ title: TALLER FORMATIVO EN LA PIEDRA
 date: 2019-01-05 00:14:00 Z
 author: Willy Ovalle
 image: "/uploads/posts/reunion_piedra.jpg"
+has_comments: true
 ---
 
 #### Sábado 21 de abril y domingo 22 de abril de 2018

@@ -27,6 +27,7 @@ defaults:
       image:
       layout: post
       author: Admin
+      has_comments: true
 # paginate: 5
 # paginate_path: "/noticias/page:num/"
 # plugins: [jekyll-paginate]
