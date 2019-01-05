@@ -4,17 +4,21 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-  <!--<![endif]-->
+<!--<![endif]-->
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="wide">
-    {% include header.html %}
+<body class="wide">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{site.tag_manager_id}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% include header.html %}
 
-    <div class="main-block">
-      <div class="container">{{ content }}</div>
-    </div>
+  <div class="main-block">
+    <div class="container">{{ content }}</div>
+  </div>
 
-    {% include footer.html %}
-  </body>
+  {% include footer.html %}
+</body>
+
 </html>
