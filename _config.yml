@@ -1,33 +1,28 @@
 ---
 title: Fundación Mamá Sena
-acronym: FUNDASENA
-email: fundacionmamasena@gmail.com
-description:
-  Fundación Mamá Sena es una institución sin fines de lucro que se propone
-  la recomposición de la sociedad a través de procesos de reflexión, capacitación
-  y acción comunitaria para el crecimiento en valores humanos.
 timezone: UTC
-twitter_username: fundasenard
-baseurl: ""
-url: https://fundasena.org
-markdown: kramdown
 collections:
   posts:
     title: Noticias
-    permalink: "/noticias/:title"
     output: true
   uploads:
     title: Uploads
     output: true
 defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      image:
-      layout: post
-      author: Admin
-      has_comments: true
-# paginate: 5
-# paginate_path: "/noticias/page:num/"
-# plugins: [jekyll-paginate]
+- scope:
+    path: ''
+    type: posts
+  values:
+    image: 
+    layout: post
+    author: Admin
+    has_comments: true
+acronym: FUNDASENA
+email: fundacionmamasena@gmail.com
+description: Fundación Mamá Sena es una institución sin fines de lucro que se propone
+  la recomposición de la sociedad a través de procesos de reflexión, capacitación
+  y acción comunitaria para el crecimiento en valores humanos.
+twitter_username: fundasenard
+baseurl: ''
+url: https://fundasena.org
+markdown: kramdown
