@@ -31,3 +31,9 @@
 .blog-masonry .item .grid-entry .bor {
   background: #32c8de;
 }
+
+.carousel-inner .item img {
+  height: 400px;
+  display: block;
+  margin: auto;
+}
