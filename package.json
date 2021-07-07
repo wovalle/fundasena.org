@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "3",
+    "font-awesome": "^4.7.0",
     "next": "11.0.1",
+    "npm": "^7.19.1",
     "react": "^18.0.0-alpha-ed6c091fe-20210701",
     "react-dom": "^18.0.0-alpha-ed6c091fe-20210701"
   },
