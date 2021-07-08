@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function News() {
   const defaultImage = "https://fundasena.org/uploads/logos/logo.jpg";
@@ -19,6 +20,7 @@ export default function News() {
         {/* <!-- Grid Image Container --> */}
         <div className="grid-img">
           {/* <!-- Image --> */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={n.imgSrc} className="img-responsive" alt={n.title} />
           {/* <!-- Grid Image Hover Effect --> */}
           <span className="grid-img-hover"></span>

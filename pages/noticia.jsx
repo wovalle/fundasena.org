@@ -73,6 +73,7 @@ export default function Article() {
                   {/* <!-- Item, First item should have extra class "active" --> */}
                   <div className="item active">
                     {/* <!-- Image --> */}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={page.imgSrc} alt="" />
                   </div>
                 </div>
