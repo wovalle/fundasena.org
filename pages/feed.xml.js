@@ -30,6 +30,6 @@
 //   </channel>
 // </rss>
 
-export function FeedXML() {
+export default function FeedXML() {
   return "soon";
 }
