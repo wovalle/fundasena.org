@@ -62,8 +62,6 @@ export async function getInstagramPosts() {
     return acc;
   }, {});
 
-  // console.log({ images });
-
   return { ...igPosts, images };
 }
 

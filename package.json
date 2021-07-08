@@ -5,16 +5,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:with-sanity": "yarn build:sanity && yarn build",
+    "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
+    "start:sanity": "cp .env ./studio/.env.development && cd studio && sanity start",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
     "bootstrap": "3",
+    "date-fns": "^2.22.1",
     "font-awesome": "^4.7.0",
     "next": "11.0.1",
+    "next-sanity": "^0.3.0",
     "npm": "^7.19.1",
-    "react": "^18.0.0-alpha-ed6c091fe-20210701",
-    "react-dom": "^18.0.0-alpha-ed6c091fe-20210701"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "eslint": "7.30.0",

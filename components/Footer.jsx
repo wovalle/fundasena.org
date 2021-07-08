@@ -1,18 +1,14 @@
 import Link from "next/link";
 import constants from "../constants.json";
+import { getPostsForFooter } from "../lib/api";
 
-/*
-const todo = ```
-{% for post in site.posts limit: 5 %}
-               <!-- Link -->
-              <li>
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-              </li>
-              {% endfor %}
-              ```;
-*/
+export function Footer({ posts = [] }) {
+  const recentActivities = posts.map((p) => (
+    <li key={p.slug}>
+      <Link href={`/actividades/${p.slug}`}>{p.title}</Link>
+    </li>
+  ));
 
-export function Footer() {
   return (
     <>
       <div className="foot">
@@ -52,11 +48,11 @@ export function Footer() {
               <div className="foot-item">
                 {/* <!-- Heading --> */}
                 <h5 className="bold">
-                  <i className="fa fa-comments"></i> Noticias Recientes
+                  <i className="fa fa-comments"></i> Actividades Recientes
                 </h5>
                 {/* <!-- Foot Item Content --> */}
                 <div className="foot-item-content">
-                  <ul className="list-unstyled">todo {/* see comment */}</ul>
+                  <ul className="list-unstyled">{recentActivities}</ul>
                 </div>
               </div>
             </div>
@@ -117,7 +113,7 @@ export function Footer() {
               <Link href="/nosotros">Sobre Nosotros</Link>
             </li>
             <li>
-              <Link href="/noticias">Noticias</Link>
+              <Link href="/actividades">Actividades</Link>
             </li>
             <li>
               <Link href="/contactos">Contactos</Link>
@@ -129,4 +125,13 @@ export function Footer() {
       </footer>
     </>
   );
+}
+
+export async function getStaticProps({ preview = false }) {
+  const posts = await getPostsForFooter(preview);
+
+  return {
+    props: { posts, preview },
+    revalidate: 1,
+  };
 }
