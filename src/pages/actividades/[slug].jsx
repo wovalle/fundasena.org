@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import { isValid, parseISO, format } from "date-fns";
 
@@ -154,6 +153,7 @@ export async function getStaticProps({ params, preview = false }) {
 
 export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug();
+
   return {
     paths:
       allPosts?.map((post) => ({
@@ -161,6 +161,6 @@ export async function getStaticPaths() {
           slug: post.slug,
         },
       })) || [],
-    fallback: true,
+    fallback: false,
   };
 }

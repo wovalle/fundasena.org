@@ -35,13 +35,14 @@ export function Header() {
                 >
                   <i className="fa fa-instagram square-2 rounded-1"></i>
                 </a>
-                <a href="{{site.baseurl}}/feed.xml" className="google-plus">
-                  <i className="fa fa-rss square-2 rounded-1"></i>
-                </a>
+                <Link href="/feed.xml">
+                  <a className="google-plus">
+                    <i className="fa fa-rss square-2 rounded-1" />
+                  </a>
+                </Link>
               </div>
             </div>
             {/* <!-- Social media ends --> */}
-
             <div className="clearfix"></div>
           </div>
         </div>

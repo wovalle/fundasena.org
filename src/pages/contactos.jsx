@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <>
@@ -145,9 +147,11 @@ export default function Contact() {
                     </a>
                   </li>
                   <li>
-                    <a href="{{site.baseurl}}/feed.xml" className="google-plus">
-                      <i className="fa fa-rss circle-2"> </i> RSS Feed
-                    </a>
+                    <Link href="/feed.xml" passHref>
+                      <a className="google-plus">
+                        <i className="fa fa-rss circle-2"> </i> RSS Feed
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

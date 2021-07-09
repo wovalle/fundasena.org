@@ -1,21 +1,14 @@
 import Link from "next/link";
 import constants from "../constants.json";
-import { getPostsForFooter } from "../lib/api";
 
-export function Footer({ posts = [] }) {
-  const recentActivities = posts.map((p) => (
-    <li key={p.slug}>
-      <Link href={`/actividades/${p.slug}`}>{p.title}</Link>
-    </li>
-  ));
-
+export function Footer() {
   return (
     <>
       <div className="foot">
         {/* <!-- Container --> */}
         <div className="container">
           <div className="row">
-            <div className="col-md-4 col-sm-12 col-xs-12">
+            <div className="col-md-6 col-sm-12 col-xs-12">
               {/* <!-- Foot Item --> */}
               <div className="foot-item">
                 {/* <!-- Heading --> */}
@@ -43,20 +36,7 @@ export function Footer({ posts = [] }) {
                 </div>
               </div>
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12">
-              {/* <!-- Foot Item --> */}
-              <div className="foot-item">
-                {/* <!-- Heading --> */}
-                <h5 className="bold">
-                  <i className="fa fa-comments"></i> Actividades Recientes
-                </h5>
-                {/* <!-- Foot Item Content --> */}
-                <div className="foot-item-content">
-                  <ul className="list-unstyled">{recentActivities}</ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-12 col-xs-12">
+            <div className="col-md-6 col-sm-12 col-xs-12">
               {/* <!-- Foot Item --> */}
               <div className="foot-item">
                 {/* <!-- Heading --> */}
@@ -125,13 +105,4 @@ export function Footer({ posts = [] }) {
       </footer>
     </>
   );
-}
-
-export async function getStaticProps({ preview = false }) {
-  const posts = await getPostsForFooter(preview);
-
-  return {
-    props: { posts, preview },
-    revalidate: 1,
-  };
 }

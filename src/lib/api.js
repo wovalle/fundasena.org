@@ -18,6 +18,8 @@ export async function getAllPostsForActivities(preview) {
   mainImage,
   summary,
   'slug': slug.current,
+  'date': publishedAt,
+  'author': author->{name},
 `;
 
   const results = await getClient(preview).fetch(

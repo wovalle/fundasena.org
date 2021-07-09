@@ -5,5 +5,20 @@
   "description": "Fundación Mamá Sena es una institución sin fines de lucro que se propone la recomposición de la sociedad a través de procesos de reflexión, capacitación y acción comunitaria para el crecimiento en valores humanos.",
   "twitter_username": "fundasenard",
   "url": "https://fundasena.org",
-  "tag_manager_id": "GTM-W9SZGPG"
+  "tag_manager_id": "GTM-W9SZGPG",
+  "social_networks": [{
+    "name": "Instagram",
+    "url": "https://www.instagram.com/fundasenard",
+    "iconClass": "fa fa-instagram"
+  },
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/fundasenard",
+    "iconClass": "fa fa-facebook"
+  },
+  {
+    "name": "RSS Feed",
+    "url": "/feed.xml",
+    "iconClass": "fa fa-rss"
+  }]
 }
