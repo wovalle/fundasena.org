@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="non-profit-home">
@@ -8,13 +10,20 @@ export default function Home() {
           <div className="item active">
             {/* <!-- Image --> */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logos/logo_wide.png" alt="Fundasena Logo" />
+            <Image
+              src="/logos/logo_wide.png"
+              alt="Fundasena Logo"
+              height={400}
+              width={1140}
+              layout="intrinsic"
+              objectFit="contain"
+            />
             {/* <!-- Right big --> */}
           </div>
         </div>
 
         {/* <!-- Carousel ends --> */}
-        <div className="divider-1"></div>
+        <div className="divider-1 hidden-xs"></div>
 
         {/* <!-- About starts --> */}
         <div className="np-about">

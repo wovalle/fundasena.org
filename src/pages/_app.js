@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
           title={constants.title}
           href={`${constants.url}/feed.xml`}
         ></link>
-        <title>{constants.title}</title>
+        <title>{constants.acronym}</title>
         <meta name="description" content={constants.description} />
       </Head>
       <Layout>

@@ -1,7 +1,58 @@
 import Link from "next/link";
+import { useRouter, Router } from "next/router";
+import { useEffect, useState } from "react";
 import constants from "../constants.json";
 
+const MenuItem = ({ url, name, options, children }) => (
+  <li key={url} className="menu-item">
+    <>
+      <Link href={url} passHref>
+        <a href={url}>
+          <>
+            {name}
+            {options?.length && <i className="fa fa-angle-down" />}
+          </>
+        </a>
+      </Link>
+
+      {children && <ul>{children}</ul>}
+    </>
+  </li>
+);
+
 export function Header() {
+  const defaultMenuClass = "navy";
+  const expandMenuClass = "expanded";
+  const [menuListClass, setMenuListClass] = useState(defaultMenuClass);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    router.events.on("routeChangeStart", () => {
+      setMenuListClass(defaultMenuClass);
+    });
+
+    return () => router.events.off("routeChangeStart");
+  }, [router]);
+
+  const menu = constants.menu.map((i) => {
+    const options = i.options?.map((o) => <MenuItem key={o.url} {...o} />);
+
+    return (
+      <MenuItem key={i.url} {...i}>
+        {options?.length ? options : null}
+      </MenuItem>
+    );
+  });
+
+  const onClickSandwich = () => {
+    if (menuListClass.includes(expandMenuClass)) {
+      setMenuListClass(defaultMenuClass);
+    } else {
+      setMenuListClass((prevClass) => `${prevClass} ${expandMenuClass}`);
+    }
+  };
+
   return (
     <header>
       {/* <!-- Outer Starts --> */}
@@ -54,7 +105,7 @@ export function Header() {
           {/* <!-- Container --> */}
           <div className="container">
             <div className="row">
-              <div className="col-md-2">
+              <div className="col-md-3 col-xs-8">
                 {/* <!-- Logo section --> */}
                 <div className="logo">
                   <h1>
@@ -62,46 +113,17 @@ export function Header() {
                   </h1>
                 </div>
               </div>
-              <div className="col-md-9">
+              <div className="col-md-9 col-xs-4">
                 {/* <!-- Navigation starts.  --> */}
                 <div className="navy">
-                  <ul>
+                  <button
+                    id="menu-button"
+                    className="visible-xs visible-sm"
+                    onClick={onClickSandwich}
+                  ></button>
+                  <ul className={`${menuListClass} hidden-sm`}>
                     {/* <!-- Main menu --> */}
-                    <li>
-                      <Link href="/">Inicio</Link>
-                    </li>
-                    <li>
-                      <Link href="/nosotros">Sobre Nosotros</Link>
-                    </li>
-                    <li>
-                      <Link href="/objetivos" passHref>
-                        <>
-                          <a>
-                            Objetivos <i className="fa fa-angle-down "></i>
-                          </a>
-                          <ul>
-                            <li>
-                              <Link href="/objetivos#mision">Misión</Link>
-                            </li>
-                            <li>
-                              <Link href="/objetivos#vision">Visión</Link>
-                            </li>
-                          </ul>
-                        </>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/programas">Programas</Link>
-                    </li>
-                    {/* <li>
-                      <Link href="/galeria">Galería</Link>
-                    </li> */}
-                    <li>
-                      <Link href="/actividades">Actividades</Link>
-                    </li>
-                    <li>
-                      <Link href="/contactos">Contactos</Link>
-                    </li>
+                    {menu}
                   </ul>
                 </div>
                 {/* <!-- Navigation ends --> */}

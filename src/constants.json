@@ -20,5 +20,41 @@
     "name": "RSS Feed",
     "url": "/feed.xml",
     "iconClass": "fa fa-rss"
-  }]
+  }],
+  "menu": [
+    {
+      "name": "Inicio",
+      "url": "/"
+    },
+    {
+      "name": "Sobre Nosotros",
+      "url": "/nosotros"
+    },
+    {
+      "name": "Objetivos",
+      "url": "/objetivos",
+      "options": [
+        {
+          "name": "Misión",
+          "url": "/objetivos#mision"
+        },
+        {
+          "name": "Visión",
+          "url": "/objetivos#vision"
+        }
+      ]
+    },
+    {
+      "name": "Programas",
+      "url": "/programas"
+    },
+    {
+      "name": "Actividades",
+      "url": "/actividades"
+    },
+    {
+      "name": "Contactos",
+      "url": "/contactos"
+    }
+  ]
 }

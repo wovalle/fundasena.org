@@ -14,7 +14,7 @@ export default function Activities({ posts }) {
   }));
 
   const activityList = activities.map((a) => (
-    <div className="item col-md-4 col-sm-12 col-xs-12" key={a.slug}>
+    <div className="item col-md-4 col-sm-6 col-xs-12" key={a.slug}>
       {/* <!-- Entry for each grid --> */}
       <div className="grid-entry">
         {/* <!-- Grid Image Container --> */}

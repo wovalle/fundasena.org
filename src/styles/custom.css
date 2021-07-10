@@ -37,6 +37,43 @@
   display: block;
   margin: auto;
 }
+
 .contact-item {
   padding-bottom: 20px;
+}
+
+.menu-item i {
+  padding-left: 5px;
+}
+
+@media (max-width: 785px) {
+  .header-2 .logo {
+    margin: 0;
+  }
+}
+
+ul.navy.expanded {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 48px;
+}
+
+.header-2 .navy #menu-button {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  float: right;
+}
+.header-2 .navy #menu-button:after {
+  content: "\f0c9";
+  font-family: "FontAwesome";
+  font-weight: 400;
+  float: right;
+  font-size: 14px;
 }
