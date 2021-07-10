@@ -7,7 +7,7 @@ import { urlFor } from "../lib/sanity";
 export default function Activities({ posts }) {
   const activities = posts.map((p) => ({
     title: p.title,
-    imgSrc: urlFor(p.mainImage).url(),
+    imgSrc: p.mainImage ? urlFor(p.mainImage).url() : "/logos/logo.jpg",
     summary: p.summary,
     url: `/actividades/${p.slug}`,
     slug: p.slug,
@@ -25,7 +25,7 @@ export default function Activities({ posts }) {
             className="img-responsive"
             alt={a.title}
             layout="responsive"
-            objectFit="cover"
+            objectFit="contain"
             width={350}
             height={260}
           />
@@ -69,8 +69,9 @@ export default function Activities({ posts }) {
 
 export async function getStaticProps({ preview = false }) {
   const posts = await getAllPostsForActivities(preview);
+
   return {
     props: { posts, preview },
-    revalidate: 1,
+    revalidate: 60,
   };
 }
