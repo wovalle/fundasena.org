@@ -17,7 +17,7 @@ export default function Post({ post }) {
   const page = {
     slug: post.slug,
     title: post.title,
-    imgSrc: urlFor(post.mainImage).url(),
+    imgSrc: post.mainImage ? urlFor(post.mainImage).url() : "/logos/logo.jpg",
     body: parseBody(post.body),
     date: parseDate(post.date),
     author: post.author.name,
